@@ -51,7 +51,7 @@ cv_randomForest <- function(formula, dataset, k, n_tree, m ) {
 }
 
 # Check Features that have high contribution to predict score.
-simple_Rf <- randomForest(score ~ . , data = df_train, ntree = 2000, mtry = 2, importance = TRUE)
+simple_Rf <- randomForest(score ~ . , data = df_train, importance = TRUE)
 simple_Rf
 varImp(simple_Rf, conditional = TRUE)
 
